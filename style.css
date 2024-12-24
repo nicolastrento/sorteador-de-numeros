@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+body {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  width: 382px;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 38px;
+  color: #fff;
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 40px;
+
+  & span {
+    color: #806C00;
+    font-weight: 700;
+  }
+}
+
+input {
+  background: rgba(88, 88, 47, 0.75);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 14px;
+  height: 54px;
+  width: 242px;
+  padding-left: 27px;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 47px;
+  color: #af920f;
+  opacity: 0.7;
+}
+
+.input-min {
+  margin-right: 62px;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #806C00;
+  box-shadow: 0px 6px 40px #b1801f;
+  width: 252px;
+  height: 62px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.startButton:hover {
+  opacity: 0.7;
+}
+
+.startButton:active {
+  opacity: 0.8;
+}
+
+.circle-animation {
+  position: fixed;
+  margin-top: -94px;
+  margin-left: 280px;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 3px solid #806C00;
+  border-top-color: transparent;
+
+  animation: none;
+  animation: spin 1s linear infinite;
+  visibility: hidden;
+
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Para remover as setas de seleção nos navegadores Webkit (Chrome, Safari) */
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+}
+/* Para Firefox */
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+
+.result-number {
+  text-align: center;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+  border: 1px solid #806C00;
+  box-shadow: 0px 3px 20px #b1801f;
+  font-size: 28px;
+  position: relative;
+}
+
+.input-result {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 1px;
+  margin-left: 0px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+  color: #b1801f;
+  font-size: 28px;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Certifique-se de que o texto será centralizado */
+  line-height: 1;
+  overflow: hidden;
+}
